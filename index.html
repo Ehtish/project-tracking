@@ -16,7 +16,6 @@
 </head>
 <body>
     <header class="header | container | padding-block-700">
-        <!-- <div class="container"> -->
             <nav class="navbar">
                 <img class="logo" src="images/logo.svg" alt="logo">
                 <ul class="navlist" role="list">
@@ -40,25 +39,12 @@
                     <button class="btn">Schedule a demo</button>
                     <button class="btn" data-type="inverted">To see live Preview</button>
                 </div>
-                <div class="intro">
+                <div class="right">
                     <div class="bg"></div>
                     <img src="images/illustration-devices.svg" alt="intro-image">
                 </div>
             </div>
-        <!-- </div> -->
     </header>
-
-    <script>
-        // for toggle menu 
-        const mobile_nav = document.querySelector(".mobile-navbar-btn");
-        const nav_header = document.querySelector(".header");
-
-
-        const toggleNavbar = () => {
-        nav_header.classList.toggle("active");
-        };
-
-        mobile_nav.addEventListener("click", () => toggleNavbar());
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
