@@ -5,19 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project tracking | front end mentor challenge</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <img class="logo" src="images/logo.svg" alt="logo">
-            <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
+    <header class="header | container | padding-block-700">
+        <!-- <div class="container"> -->
+            <nav class="navbar">
+                <img class="logo" src="images/logo.svg" alt="logo">
+                <ul class="navlist" role="list">
+                    <li><a class="navlink" href="#">Product</a></li>
+                    <li><a class="navlink" href="#">Features</a></li>
+                    <li><a class="navlink" href="#">Pricing</a></li>
+                    <li><a class="navlink last" href="#">Login</a></li>
+                </ul>
+                <div class="mobile-navbar-btn">
+                    <i class="mobile-navbar-icon | fa fa-bars fa-2x" name="menu"></i>
+                    <i class="mobile-navbar-icon | fa fa-x fa-2x" name="close"></i>
+                </div>
+            </nav>
+        
+            <div class="even-columns | pt-8">
+                <div class="left">
+                    <p><span>New </span>Monograph Dashboard</p>
+                    <h1>Powerful Insights Into Your Team</h2>
+                    <p class="last-text">Project planning and time tracking for agile teams</p>
+                    <button class="btn">Schedule a demo</button>
+                    <button class="btn" data-type="inverted">To see live Preview</button>
+                </div>
+                <div class="intro">
+                    <div class="bg"></div>
+                    <img src="images/illustration-devices.svg" alt="intro-image">
+                </div>
+            </div>
+        <!-- </div> -->
     </header>
+
+    <script>
+        // for toggle menu 
+        const mobile_nav = document.querySelector(".mobile-navbar-btn");
+        const nav_header = document.querySelector(".header");
+
+
+        const toggleNavbar = () => {
+        nav_header.classList.toggle("active");
+        };
+
+        mobile_nav.addEventListener("click", () => toggleNavbar());
+    </script>
 </body>
 </html>
